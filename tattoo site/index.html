@@ -1217,6 +1217,27 @@
         window.addEventListener("touchend", stopDrag);
     })();
 </script>
-    
+
+<!-- Client-Side Health Monitor Script -->
+<script>
+    window.healthCheck = async function() {
+        const status = {
+            site: "UP",
+            timestamp: new Date().toISOString(),
+            telegramApi: "UNKNOWN"
+        };
+        
+        try {
+            const res = await fetch("https://api.telegram.org");
+            status.telegramApi = res.ok || res.status === 404 ? "REACHABLE" : "DOWN";
+        } catch (e) {
+            status.telegramApi = "UNREACHABLE";
+        }
+        
+        console.log("Health Check Status:", status);
+        return status;
+    };
+</script>
+
 </body
 </html>
