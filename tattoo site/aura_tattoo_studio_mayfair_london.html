@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA TATTOO STUDIO | Exclusive Bespoke Body Art | Mayfair, London</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        silver: {
+                            100: '#F4F4F5',
+                            300: '#D4D4D8',
+                            400: '#A1A1AA',
+                            500: '#71717A',
+                        },
+                        obsidian: {
+                            950: '#08080A',
+                            900: '#0E0E11',
+                            800: '#16161A',
+                            700: '#222228',
+                            600: '#2E2E36',
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #08080A;
+            color: #E4E4E7;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Cinzel', serif;
+        }
+        .monochrome-gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, #A1A1AA 50%, #52525B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .silver-border-glow {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+        }
+        .glass-panel {
+            background: rgba(22, 22, 26, 0.85);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #08080A;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2E2E36;
+            border-radius: 3px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #FFFFFF;
+        }
+        .bw-img {
+            filter: grayscale(100%) contrast(110%);
+            transition: filter 0.5s ease, transform 0.5s ease;
+        }
+        .bw-img:hover {
+            filter: grayscale(100%) contrast(125%) brightness(110%);
+        }
+    </style>
+</head>
+<body class="custom-scrollbar selection:bg-white selection:text-black">
+
+    <!-- TOP ANNOUNCEMENT BANNER -->
+    <div class="bg-gradient-to-r from-obsidian-950 via-obsidian-700 to-obsidian-950 border-b border-white/10 text-xs py-2.5 px-4 text-center tracking-widest text-silver-300 font-cinzel">
+        <i class="fa-solid fa-gem mr-2 text-white"></i> EXCLUSIVE MAYFAIR ATELIER · PRIVATE APPOINTMENTS ONLY ·  £200/HOUR RATE ·  £100 BOOKING DEPOSIT
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="sticky top-0 z-50 glass-panel transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center bg-obsidian-800 group-hover:border-white transition-all">
+                        <span class="font-cinzel text-xl font-bold text-white">A</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-cinzel text-xl tracking-widest font-bold text-white group-hover:text-silver-300 transition-colors">AURA</span>
+                        <span class="text-[9px] tracking-[0.3em] text-silver-400 uppercase -mt-1">Tattoo Atelier · Mayfair</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Items -->
+                <div class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-widest font-medium">
+                    <a href="#about" class="text-silver-300 hover:text-white transition-colors">Experience</a>
+                    <a href="#artists" class="text-silver-300 hover:text-white transition-colors">Artists</a>
+                    <a href="#gallery" class="text-silver-300 hover:text-white transition-colors">Gallery</a>
+                    <a href="#pricing" class="text-silver-300 hover:text-white transition-colors">Pricing & Policy</a>
+                    <a href="#aftercare" class="text-silver-300 hover:text-white transition-colors">Aftercare</a>
+                    <a href="#faq" class="text-silver-300 hover:text-white transition-colors">FAQ</a>
+                    <a href="#contact" class="text-silver-300 hover:text-white transition-colors">Contact</a>
+                </div>
+
+                <!-- Currency & CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- Currency Toggle Switch -->
+                    <div class="bg-obsidian-900 border border-white/20 rounded-full p-1 flex items-center text-xs font-semibold">
+                        <button id="currency-usd" onclick="setCurrency('USD')" class="px-3 py-1 rounded-full bg-white text-black transition-all">$ USD</button>
+                        <button id="currency-gbp" onclick="setCurrency('GBP')" class="px-3 py-1 rounded-full text-silver-400 hover:text-white transition-all">£ GBP</button>
+                    </div>
+
+                    <a href="#booking" class="px-6 py-2.5 rounded-full bg-white text-black font-bold text-xs tracking-wider uppercase hover:bg-silver-300 transition-all shadow-lg shadow-white/10">
+                        Book Session
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center space-x-3">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-silver-300 hover:text-white p-2">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-obsidian-900 border-b border-white/10 px-6 py-6 space-y-4 text-sm font-medium uppercase tracking-widest">
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-silver-300 hover:text-white">Experience</a>
+            <a href="#artists" onclick="toggleMobileMenu()" class="block text-silver-300 hover:text-white">Artists</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block text-silver-300 hover:text-white">Gallery</a>
+            <a href="#booking" onclick="toggleMobileMenu()" class="block text-white font-bold">Book Session</a>
+            <a href="#pricing" onclick="toggleMobileMenu()" class="block text-silver-300 hover:text-white">Pricing & Policy</a>
+            <a href="#aftercare" onclick="toggleMobileMenu()" class="block text-silver-300 hover:text-white">Aftercare</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block text-silver-300 hover:text-white">FAQ</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-silver-300 hover:text-white">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-24">
+        <!-- Background Overlay & Monochromatic Image -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-20 filter grayscale contrast-125 scale-105"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/80 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-obsidian-950 via-transparent to-obsidian-950"></div>
+
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full border border-white/20 bg-obsidian-800/80 backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                <span class="text-xs uppercase tracking-widest text-silver-300">14 Berkeley Street, Mayfair, London</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight font-cinzel">
+                BESPOKE MONOCHROME <br>
+                <span class="monochrome-gradient-text">BODY ART ATELIER</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-silver-400 font-light leading-relaxed">
+                An exclusive private atelier crafting ultra-fine realism, heavy blackwork mastery, and haute-couture custom tattoos for discerning collectors worldwide.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                <a href="#booking" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-bold text-xs tracking-widest uppercase hover:bg-silver-300 transition-all shadow-xl shadow-white/10">
+                    <i class="fa-solid fa-calendar-check mr-2"></i> Book Private Session
+                </a>
+                <a href="#gallery" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 bg-obsidian-800/60 hover:bg-obsidian-700 text-white font-medium text-xs tracking-widest uppercase transition-all backdrop-blur-md">
+                    Explore Portfolio
+                </a>
+            </div>
+
+            <!-- Highlights Pill -->
+            <div class="pt-12 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 max-w-4xl mx-auto">
+                <div>
+                    <p class="font-cinzel text-2xl font-bold text-white" id="rate-display">£200 / hr</p>
+                    <p class="text-xs text-silver-400 uppercase tracking-wider mt-1">Hourly Session Rate</p>
+                </div>
+                <div>
+                    <p class="font-cinzel text-2xl font-bold text-white" id="deposit-display">£100</p>
+                    <p class="text-xs text-silver-400 uppercase tracking-wider mt-1">Booking Deposit</p>
+                </div>
+                <div>
+                    <p class="font-cinzel text-2xl font-bold text-white">100% Private</p>
+                    <p class="text-xs text-silver-400 uppercase tracking-wider mt-1">VIP Studio Suites</p>
+                </div>
+                <div>
+                    <p class="font-cinzel text-2xl font-bold text-white">15+ Yrs</p>
+                    <p class="text-xs text-silver-400 uppercase tracking-wider mt-1">Master Craftsmanship</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOSIT & PRICING BANNER -->
+    <section id="pricing" class="py-16 bg-obsidian-900 border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <div class="inline-flex items-center space-x-2 text-silver-300 text-xs font-semibold tracking-widest uppercase">
+                            <i class="fa-solid fa-shield-halved text-white"></i>
+                            <span>Transparent Luxury Pricing Policy</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-cinzel text-white">
+                            Session Rate: <span class="monochrome-gradient-text price-rate">$200 per hour</span>
+                        </h2>
+                        <p class="text-silver-300 text-sm leading-relaxed max-w-2xl">
+                            All custom work is billed at our standard flat hourly rate (£200/hr). To ensure an unhurried, VIP atmosphere, we operate strictly by appointment with a non-refundable £100 deposit to lock in calendar allocation and initial custom stencil drafting.
+                        </p>
+                        <div class="flex flex-wrap gap-4 text-xs text-silver-400 pt-2">
+                            <span class="flex items-center"><i class="fa-solid fa-check text-white mr-2"></i> Free 30-min Pre-Consultation</span>
+                            <span class="flex items-center"><i class="fa-solid fa-check text-white mr-2"></i> Medical-grade Aftercare Kit Included</span>
+                            <span class="flex items-center"><i class="fa-solid fa-check text-white mr-2"></i> Deposit Deducted From Final Session Balance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-4 bg-obsidian-950 border border-white/20 rounded-2xl p-6 text-center space-y-4">
+                        <p class="text-xs uppercase tracking-widest text-silver-400">Required Booking Deposit</p>
+                        <p class="text-4xl font-bold font-cinzel monochrome-gradient-text price-deposit">£100.00</p>
+                        <p class="text-xs text-silver-400">Secures calendar date & time slot. Deductible on the day of your session.</p>
+                        <a href="#booking" class="block w-full py-3 rounded-xl bg-white text-black font-bold text-xs uppercase tracking-wider hover:bg-silver-300 transition-all">
+                            Reserve Calendar Date
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE BOOKING CALCULATOR ENGINE -->
+    <section id="booking" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-widest text-silver-400 font-semibold">Bespoke Concierge</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-cinzel text-white">SESSION CALCULATOR & BOOKING</h2>
+                <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto"></div>
+                <p class="text-silver-400 max-w-xl mx-auto text-sm">Design your upcoming session, select your placement, choose an artist, and lock in your date with our secure deposit engine.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Interactive Wizard Form -->
+                <div class="lg:col-span-8 glass-panel rounded-3xl p-6 sm:p-10 space-y-8">
+                    
+                    <!-- Step 1: Tattoo Placement -->
+                    <div class="space-y-4">
+                        <label class="block text-xs uppercase tracking-widest text-white font-semibold">1. Select Body Placement</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3" id="placement-options">
+                            <button onclick="selectPlacement('Arm / Forearm', 3, this)" class="placement-btn active-option p-4 rounded-xl border border-white bg-obsidian-800 text-left transition-all">
+                                <i class="fa-solid fa-hand text-white mb-2 text-lg"></i>
+                                <p class="text-sm font-semibold text-white">Arm / Forearm</p>
+                                <p class="text-[11px] text-silver-400">Est. 2-4 Hours</p>
+                            </button>
+                            <button onclick="selectPlacement('Full Sleeve', 8, this)" class="placement-btn p-4 rounded-xl border border-white/10 bg-obsidian-900 hover:border-white/40 text-left transition-all">
+                                <i class="fa-solid fa-child text-white mb-2 text-lg"></i>
+                                <p class="text-sm font-semibold text-white">Full Sleeve</p>
+                                <p class="text-[11px] text-silver-400">Est. 6-10 Hours</p>
+                            </button>
+                            <button onclick="selectPlacement('Chest / Back', 6, this)" class="placement-btn p-4 rounded-xl border border-white/10 bg-obsidian-900 hover:border-white/40 text-left transition-all">
+                                <i class="fa-solid fa-shield text-white mb-2 text-lg"></i>
+                                <p class="text-sm font-semibold text-white">Chest / Back</p>
+                                <p class="text-[11px] text-silver-400">Est. 5-8 Hours</p>
+                            </button>
+                            <button onclick="selectPlacement('Leg / Thigh', 4, this)" class="placement-btn p-4 rounded-xl border border-white/10 bg-obsidian-900 hover:border-white/40 text-left transition-all">
+                                <i class="fa-solid fa-shoe-prints text-white mb-2 text-lg"></i>
+                                <p class="text-sm font-semibold text-white">Leg / Thigh</p>
+                                <p class="text-[11px] text-silver-400">Est. 3-6 Hours</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Resident Artist Selection -->
+                    <div class="space-y-4">
+                        <label class="block text-xs uppercase tracking-widest text-white font-semibold">2. Choose Resident Master Artist</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="artist-options">
+                            <button onclick="selectArtist('Viktor Vance', 'Realism & Blackwork', this)" class="artist-btn active-option p-4 rounded-xl border border-white bg-obsidian-800 text-left transition-all">
+                                <p class="text-sm font-bold text-white">Viktor Vance</p>
+                                <p class="text-xs text-silver-300">Dark Realism & Portraits</p>
+                            </button>
+                            <button onclick="selectArtist('Elena Rostova', 'Fine-Line & Micro-Realism', this)" class="artist-btn p-4 rounded-xl border border-white/10 bg-obsidian-900 hover:border-white/40 text-left transition-all">
+                                <p class="text-sm font-bold text-white">Elena Rostova</p>
+                                <p class="text-xs text-silver-300">Fine-Line & Single Needle</p>
+                            </button>
+                            <button onclick="selectArtist('Marcus Thorne', 'Ornamental & Japanese', this)" class="artist-btn p-4 rounded-xl border border-white/10 bg-obsidian-900 hover:border-white/40 text-left transition-all">
+                                <p class="text-sm font-bold text-white">Marcus Thorne</p>
+                                <p class="text-xs text-silver-300">Blackwork & Irezumi</p>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Estimated Hours Slider -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <label class="text-xs uppercase tracking-widest text-white font-semibold">3. Estimated Session Duration</label>
+                            <span id="hours-display" class="font-cinzel text-lg font-bold text-white">3 Hours</span>
+                        </div>
+                        <input type="range" id="hours-slider" min="1" max="10" value="3" oninput="updateBookingEstimate()" class="w-full accent-white bg-obsidian-700 h-2 rounded-lg cursor-pointer">
+                        <div class="flex justify-between text-[10px] text-silver-400 uppercase">
+                            <span>1 Hr (Touchup/Small)</span>
+                            <span>5 Hrs (Half Day)</span>
+                            <span>10 Hrs (Full Day Marathon)</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Personal Details -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs text-silver-400 mb-1">Full Name *</label>
+                            <input type="text" id="client-name" placeholder="Lord / Lady Sterling" class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-silver-400 mb-1">Email Address *</label>
+                            <input type="email" id="client-email" placeholder="client@domain.co.uk" class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-silver-400 mb-1">Phone / WhatsApp *</label>
+                            <input type="tel" id="client-phone" placeholder="+44 7700 900077" class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-silver-400 mb-1">Preferred Date</label>
+                            <input type="date" id="client-date" class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-silver-400 mb-1">Reference Concept Note</label>
+                        <textarea id="client-notes" rows="3" placeholder="Describe your vision, dimensions, or paste reference links..." class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white"></textarea>
+                    </div>
+
+                </div>
+
+                <!-- Live Summary & Payment Portal -->
+                <div class="lg:col-span-4 space-y-6">
+                    <div class="glass-panel rounded-3xl p-6 sm:p-8 space-y-6 sticky top-28 border border-white/20">
+                        <h3 class="text-xl font-bold font-cinzel text-white border-b border-white/10 pb-4">Session Breakdown</h3>
+                        
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-silver-400">Placement:</span>
+                                <span id="summary-placement" class="font-semibold text-white">Arm / Forearm</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-silver-400">Selected Artist:</span>
+                                <span id="summary-artist" class="font-semibold text-white">Viktor Vance</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-silver-400">Estimated Duration:</span>
+                                <span id="summary-hours" class="font-semibold text-white">3 Hours</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-silver-400">Hourly Rate:</span>
+                                <span id="summary-rate" class="font-semibold text-white">£200 / hr</span>
+                            </div>
+                            
+                            <hr class="border-white/10">
+                            
+                            <div class="flex justify-between text-base font-bold">
+                                <span class="text-white">Estimated Total:</span>
+                                <span id="summary-total" class="font-cinzel monochrome-gradient-text text-xl">£600.00</span>
+                            </div>
+
+                            <div class="bg-white/5 border border-white/20 rounded-xl p-4 space-y-1">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs uppercase tracking-wider text-silver-300 font-bold">Deposit Due Today</span>
+                                    <span id="summary-deposit" class="font-cinzel text-lg font-bold text-white">£100.00</span>
+                                </div>
+                                <p class="text-[11px] text-silver-400">Remaining balance (<span id="summary-remaining">£500.00</span>) due on studio session day.</p>
+                            </div>
+                        </div>
+
+                        <button onclick="processBookingSubmission()" class="w-full py-4 rounded-xl bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-silver-300 transition-all shadow-xl shadow-white/10">
+                            <i class="fa-solid fa-lock mr-2"></i> Pay £100 Deposit & Reserve
+                        </button>
+
+                        <div class="text-center text-[11px] text-silver-400 flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-shield-halved text-white"></i>
+                            <span>256-Bit Encrypted Concierge Checkout</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESIDENT ARTISTS SHOWCASE -->
+    <section id="artists" class="py-24 bg-obsidian-900/60 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-widest text-silver-400 font-semibold">Master Craftsmen</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-cinzel text-white">RESIDENT ARTISTS</h2>
+                <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto"></div>
+                <p class="text-silver-400 max-w-xl mx-auto text-sm">Our internationally acclaimed resident masters specialize in distinct monochrome tattooing disciplines, classical fine art, and single-needle precision.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Artist 1 -->
+                <div class="glass-panel rounded-3xl overflow-hidden group hover:border-white/50 transition-all">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/1.avif" alt="Viktor Vance" class="w-full h-full object-cover bw-img group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-white text-black font-bold text-[10px] uppercase tracking-wider">Lead Realism Master</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-2xl font-bold font-cinzel text-white">Viktor Vance</h3>
+                        <p class="text-xs text-silver-300 font-semibold uppercase tracking-widest">14 Years Experience · Chiaroscuro & Realism</p>
+                        <p class="text-silver-400 text-sm leading-relaxed">
+                            Formally trained at the Royal Academy of Arts, Viktor merges classical oil painting light work with ultra-smooth black-and-grey contrast.
+                        </p>
+                        <a href="#booking" onclick="selectArtist('Viktor Vance', 'Realism & Blackwork')" class="inline-block text-xs uppercase tracking-widest font-bold text-white hover:text-silver-300 transition-colors">
+                            Book With Viktor <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artist 2 -->
+                <div class="glass-panel rounded-3xl overflow-hidden group hover:border-white/50 transition-all">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/2.avif" alt="Elena Rostova" class="w-full h-full object-cover bw-img group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-white text-black font-bold text-[10px] uppercase tracking-wider">Single Needle Specialist</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-2xl font-bold font-cinzel text-white">Marcus Thorne</h3>
+                        <p class="text-xs text-silver-300 font-semibold uppercase tracking-widest">9 Years Experience · Single Needle & Micro</p>
+                        <p class="text-silver-400 text-sm leading-relaxed">
+                            Renowned across London for impossible precision geometry, delicate botanical micro-illustration, and fine-line calligraphy.
+                        </p>
+                        <a href="#booking" onclick="selectArtist('Elena Rostova', 'Fine-Line & Micro-Realism')" class="inline-block text-xs uppercase tracking-widest font-bold text-white hover:text-silver-300 transition-colors">
+                            Book With Marcus <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Artist 3 -->
+                <div class="glass-panel rounded-3xl overflow-hidden group hover:border-white/50 transition-all">
+                    <div class="h-80 overflow-hidden relative">
+                        <img src="assets/3.avif" alt="Marcus Thorne" class="w-full h-full object-cover bw-img group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
+                        <span class="absolute bottom-4 left-4 px-3 py-1 rounded-full bg-white text-black font-bold text-[10px] uppercase tracking-wider">Heavy Blackwork Master</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-2xl font-bold font-cinzel text-white">Elena Rostova</h3>
+                        <p class="text-xs text-silver-300 font-semibold uppercase tracking-widest">16 Years Experience · Japanese & Darkwork</p>
+                        <p class="text-silver-400 text-sm leading-relaxed">
+                            Having spent five years studying horimono in Kyoto, Marcus crafts dark ornamental suites, mythical motifs, and full body flow.
+                        </p>
+                        <a href="#booking" onclick="selectArtist('Marcus Thorne', 'Dark Ornamental & Japanese')" class="inline-block text-xs uppercase tracking-widest font-bold text-white hover:text-silver-300 transition-colors">
+                            Book With Elena <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAMPLE TATTOO GALLERY GRID -->
+    <section id="gallery" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div class="space-y-3">
+                    <span class="text-xs uppercase tracking-widest text-silver-400 font-semibold">Portfolio Exhibition</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold font-cinzel text-white">BLACK & WHITE GALLERY</h2>
+                </div>
+
+                <!-- Gallery Category Filters -->
+                <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="gallery-filters">
+                    <button onclick="filterGallery('all', this)" class="filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider bg-white text-black font-bold">All Work</button>
+                    <button onclick="filterGallery('realism', this)" class="filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider bg-obsidian-800 text-silver-300 hover:text-white border border-white/20">Realism</button>
+                    <button onclick="filterGallery('fineline', this)" class="filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider bg-obsidian-800 text-silver-300 hover:text-white border border-white/20">Fine Line</button>
+                    <button onclick="filterGallery('blackwork', this)" class="filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider bg-obsidian-800 text-silver-300 hover:text-white border border-white/20">Blackwork</button>
+                    <button onclick="filterGallery('sleeves', this)" class="filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider bg-obsidian-800 text-silver-300 hover:text-white border border-white/20">Sleeves</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid with reliable Black & White Tattoo Images -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                
+                <!-- Item 1: Realism Lion Sleeve -->
+                <div class="gallery-item realism sleeves group relative overflow-hidden rounded-2xl glass-panel aspect-square cursor-pointer" onclick="openModal('assets/tat1.avif', 'Chiaroscuro Strawberry Art', 'Viktor Vance · 5 Hours')">
+                    <img src="assets/tat1.avif" alt="Chiaroscuro Strawberry Art Tattoo" class="w-full h-full object-cover bw-img group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs text-white font-semibold uppercase tracking-widest">Realism · Fine Line</span>
+                        <h4 class="text-lg font-bold font-cinzel text-white">Chiaroscuro Strawberry Art</h4>
+                        <p class="text-xs text-silver-400">Artist: Viktor Vance · 5 Hours</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Geometric & Fine Line -->
+                <div class="gallery-item fineline group relative overflow-hidden rounded-2xl glass-panel aspect-square cursor-pointer" onclick="openModal('assets/tat2.avif', 'Jerry & Gold Bar', 'Elena Rostova · 3 Hours')">
+                    <img src="assets/tat2.avif" alt="Jerry and Gold Bar Tattoo" class="w-full h-full object-cover bw-img group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1590246814884-570a1d5600b4?auto=format&fit=crop&w=800&q=80'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs text-white font-semibold uppercase tracking-widest">Fine Line · Character</span>
+                        <h4 class="text-lg font-bold font-cinzel text-white">Jerry & Gold Bar</h4>
+                        <p class="text-xs text-silver-400">Artist: Elena Rostova · 3 Hours</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Japanese Ryu Dragon / Floral Sleeve -->
+<div class="gallery-item blackwork sleeves group relative overflow-hidden rounded-2xl glass-panel aspect-square cursor-pointer" onclick="openModal('assets/tat3.avif', 'Floral Sleeve Flow', 'Marcus Thorne · 7 Hours')">
+    <img src="assets/tat3.avif" alt="Floral Sleeve Flow Tattoo" class="w-full h-full object-cover bw-img group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80'">
+    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+        <span class="text-xs text-white font-semibold uppercase tracking-widest">Blackwork · Sleeve</span>
+        <h4 class="text-lg font-bold font-cinzel text-white">Floral Sleeve Flow</h4>
+        <p class="text-xs text-silver-400">Artist: Marcus Thorne · 7 Hours</p>
+    </div>
+</div>
+
+                <!-- Item 4: Dark Ornamental Chestpiece -->
+                <div class="gallery-item blackwork group relative overflow-hidden rounded-2xl glass-panel aspect-square cursor-pointer" onclick="openModal('assets/tat4.avif', 'Ornamental Back Geometry', 'Marcus Thorne · 6 Hours')">
+                    <img src="assets/tat4.avif" alt="Ornamental Back Geometry Tattoo" class="w-full h-full object-cover bw-img group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1611501275019-9b5cda994e8d?auto=format&fit=crop&w=800&q=80'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs text-white font-semibold uppercase tracking-widest">Blackwork · Ornamental</span>
+                        <h4 class="text-lg font-bold font-cinzel text-white">Ornamental Back Geometry</h4>
+                        <p class="text-xs text-silver-400">Artist: Marcus Thorne · 6 Hours</p>
+                    </div>
+                </div>
+
+                <!-- Item 5: Portrait Realism Sleeve -->
+<div class="gallery-item realism sleeves group relative overflow-hidden rounded-2xl glass-panel aspect-square cursor-pointer" onclick="openModal('assets/tat5.avif', 'Chiaroscuro Portrait Realism', 'Viktor Vance · 8 Hours')">
+    <img src="assets/tat5.avif" alt="Chiaroscuro Portrait Realism Tattoo" class="w-full h-full object-cover bw-img group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80'">
+    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+        <span class="text-xs text-white font-semibold uppercase tracking-widest">Realism · Sleeve</span>
+        <h4 class="text-lg font-bold font-cinzel text-white">Chiaroscuro Portrait Realism</h4>
+        <p class="text-xs text-silver-400">Artist: Viktor Vance · 8 Hours</p>
+    </div>
+</div>
+
+                <!-- Item 6: Monochrome Portrait Realism -->
+                <div class="gallery-item realism sleeves group relative overflow-hidden rounded-2xl glass-panel aspect-square cursor-pointer" onclick="openModal('assets/6.avif', 'Bespoke Renaissance Realism', 'Viktor Vance · 8 Hours')">
+                    <img src="assets/6.avif" alt="Bespoke Renaissance Realism Tattoo" class="w-full h-full object-cover bw-img group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=800&q=80'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-6">
+                        <span class="text-xs text-white font-semibold uppercase tracking-widest">Realism · Sleeve</span>
+                        <h4 class="text-lg font-bold font-cinzel text-white">Bespoke Renaissance Realism</h4>
+                        <p class="text-xs text-silver-400">Artist: Viktor Vance · 8 Hours</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDIO VIBE / EXPERIENCE SECTION -->
+    <section id="about" class="py-24 bg-obsidian-900/80 border-y border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-silver-400 font-semibold">The Mayfair Sanctuary</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold font-cinzel text-white leading-tight">
+                        UNRIVALED PRIVACY & LUXURY HOSPITALITY
+                    </h2>
+                    <p class="text-silver-300 text-sm leading-relaxed">
+                        Situated in discreet subterranean quarters on Berkeley Street, AURA is designed as a sanctuary far removed from standard bustling high-street parlors. Every appointment enjoys a private VIP suite equipped with custom ergonomic treatment loungers, acoustic dampening, and climate control.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                        <div class="border-l-2 border-white pl-4 space-y-1">
+                            <h4 class="font-cinzel font-bold text-white text-base">Sterile Excellence</h4>
+                            <p class="text-xs text-silver-400">Medical-grade single-use autoclave protocols and hospital standards.</p>
+                        </div>
+                        <div class="border-l-2 border-white pl-4 space-y-1">
+                            <h4 class="font-cinzel font-bold text-white text-base">Complimentary Lounge</h4>
+                            <p class="text-xs text-silver-400">Rare single malt whiskies, artisan espresso, and tailored music playlists.</p>
+                        </div>
+                        <div class="border-l-2 border-white pl-4 space-y-1">
+                            <h4 class="font-cinzel font-bold text-white text-base">Vegan Organic Inks</h4>
+                            <p class="text-xs text-silver-400">100% cruelty-free, heavy-metal-free, organic high-density black pigments.</p>
+                        </div>
+                        <div class="border-l-2 border-white pl-4 space-y-1">
+                            <h4 class="font-cinzel font-bold text-white text-base">Discreet VIP Entry</h4>
+                            <p class="text-xs text-silver-400">Private valet parking and confidential client non-disclosure agreements available.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden glass-panel p-2">
+                        <img src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1000&q=80" alt="Studio Atmosphere" class="rounded-2xl w-full h-[500px] object-cover bw-img">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-obsidian-950 border border-white/30 p-6 rounded-2xl shadow-2xl hidden sm:block max-w-xs">
+                        <i class="fa-solid fa-quote-left text-white text-2xl mb-2"></i>
+                        <p class="text-xs italic text-silver-300">"London's most refined, uncompromising tattoo experience."</p>
+                        <p class="text-[10px] uppercase font-bold text-white mt-2">— GQ UK Luxury Review</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPREHENSIVE AFTERCARE GUIDE -->
+    <section id="aftercare" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-widest text-silver-400 font-semibold">Preservation Protocol</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-cinzel text-white">TATTOO AFTERCARE GUIDE</h2>
+                <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto"></div>
+                <p class="text-silver-400 max-w-xl mx-auto text-sm">Flawless long-term healing requires disciplined care during the initial 14 days following your session.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 relative">
+                    <span class="font-cinzel text-4xl font-bold text-white/10 absolute top-4 right-4">01</span>
+                    <i class="fa-solid fa-bandage text-white text-xl"></i>
+                    <h4 class="font-cinzel font-bold text-white text-lg">Initial Wrap (24 hrs)</h4>
+                    <p class="text-xs text-silver-400 leading-relaxed">
+                        Keep the dermal second-skin film applied for 24 hours. Avoid picking or removing unless excessive fluid pooling occurs.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 relative">
+                    <span class="font-cinzel text-4xl font-bold text-white/10 absolute top-4 right-4">02</span>
+                    <i class="fa-solid fa-soap text-white text-xl"></i>
+                    <h4 class="font-cinzel font-bold text-white text-lg">Gentle Cleansing</h4>
+                    <p class="text-xs text-silver-400 leading-relaxed">
+                        Wash with lukewarm water and fragrance-free antibacterial soap. Pat dry with clean paper towels—never rub or scratch.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 relative">
+                    <span class="font-cinzel text-4xl font-bold text-white/10 absolute top-4 right-4">03</span>
+                    <i class="fa-solid fa-pump-medical text-white text-xl"></i>
+                    <h4 class="font-cinzel font-bold text-white text-lg">Hydrate Lightly</h4>
+                    <p class="text-xs text-silver-400 leading-relaxed">
+                        Apply a thin layer of our provided AURA Balm 2-3 times daily. Excess ointment will clog pores and compromise ink retention.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-panel p-6 rounded-2xl space-y-3 relative">
+                    <span class="font-cinzel text-4xl font-bold text-white/10 absolute top-4 right-4">04</span>
+                    <i class="fa-solid fa-sun text-white text-xl"></i>
+                    <h4 class="font-cinzel font-bold text-white text-lg">Protect & Maintain</h4>
+                    <p class="text-xs text-silver-400 leading-relaxed">
+                        Avoid soaking in baths/pools, direct sunlight, and intense gym sessions for 14 days. Always apply SPF 50+ once fully healed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
+    <section id="faq" class="py-24 bg-obsidian-900/60 border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-xs uppercase tracking-widest text-silver-400 font-semibold">Clarity & Confidence</span>
+                <h2 class="text-3xl sm:text-5xl font-bold font-cinzel text-white">FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-white/50 to-transparent mx-auto"></div>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                <!-- FAQ Item 1 -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-white/10">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-cinzel font-bold text-white text-base focus:outline-none">
+                        <span>Why is the $100 booking deposit non-refundable?</span>
+                        <i class="fa-solid fa-chevron-down text-white transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-silver-400 leading-relaxed border-t border-white/10 pt-4">
+                        The $100 deposit secures exclusive studio calendar time with your chosen resident artist and covers the custom digital rendering, stenciling, and preparatory artwork prior to your session day. The deposit amount is fully deducted from your final session total upon completion.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-white/10">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-cinzel font-bold text-white text-base focus:outline-none">
+                        <span>Can I request custom cover-ups or old tattoo restorations?</span>
+                        <i class="fa-solid fa-chevron-down text-white transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-silver-400 leading-relaxed border-t border-white/10 pt-4">
+                        Yes. Our resident masters specialize in high-density blackwork and multi-layer realism cover-ups. We require clear high-resolution photos of the existing artwork during your preliminary consultation.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-white/10">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-cinzel font-bold text-white text-base focus:outline-none">
+                        <span>What if I need to reschedule my session?</span>
+                        <i class="fa-solid fa-chevron-down text-white transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-silver-400 leading-relaxed border-t border-white/10 pt-4">
+                        We require at least 72 hours' advance notice to transfer your $100 deposit to a new session date. Rescheduling requests made within 72 hours of the scheduled time will forfeit the deposit to compensate for open studio allocation.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="glass-panel rounded-2xl overflow-hidden border border-white/10">
+                    <button onclick="toggleFaq(this)" class="w-full p-6 text-left flex justify-between items-center font-cinzel font-bold text-white text-base focus:outline-none">
+                        <span>Are touch-ups included in the session price?</span>
+                        <i class="fa-solid fa-chevron-down text-white transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-sm text-silver-400 leading-relaxed border-t border-white/10 pt-4">
+                        All original artwork completed at AURA comes with one complimentary touch-up session within 3 months of completion, provided official aftercare guidelines were strictly followed.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & STUDIO DETAILS -->
+    <section id="contact" class="py-24 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info Column -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-silver-400 font-semibold">Mayfair Concierge</span>
+                        <h2 class="text-3xl sm:text-4xl font-bold font-cinzel text-white mt-2">STUDIO LOCATION & ENQUIRIES</h2>
+                    </div>
+
+                    <div class="space-y-6 text-sm">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-obsidian-800 border border-white/20 flex items-center justify-center shrink-0 text-white">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-cinzel font-bold text-white uppercase text-xs tracking-wider">Address</h4>
+                                <p class="text-silver-300 mt-1">14 Berkeley Street, Mayfair, London W1J 8DX, United Kingdom</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-obsidian-800 border border-white/20 flex items-center justify-center shrink-0 text-white">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-cinzel font-bold text-white uppercase text-xs tracking-wider">Direct Email</h4>
+                                <p class="text-silver-300 mt-1">auratattoo@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-obsidian-800 border border-white/20 flex items-center justify-center shrink-0 text-white">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-cinzel font-bold text-white uppercase text-xs tracking-wider">Telephone / WhatsApp</h4>
+                                <p class="text-silver-300 mt-1">+44 20 7946 0982</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-xl bg-obsidian-800 border border-white/20 flex items-center justify-center shrink-0 text-white">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-cinzel font-bold text-white uppercase text-xs tracking-wider">Studio Hours</h4>
+                                <p class="text-silver-300 mt-1">Monday – Saturday: 10:00 – 20:00</p>
+                                <p class="text-xs text-silver-400">By Appointment Only · Closed Sundays</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Map Placeholder -->
+                    <div class="rounded-2xl overflow-hidden glass-panel border border-white/20 h-48 relative flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center">
+                        <div class="absolute inset-0 bg-obsidian-950/85 backdrop-blur-sm"></div>
+                        <div class="relative text-center space-y-2 p-4">
+                            <i class="fa-solid fa-compass text-white text-3xl animate-bounce"></i>
+                            <p class="font-cinzel text-white text-sm font-bold">MAYFAIR LONDON ATELIER</p>
+                            <p class="text-xs text-silver-400">5 Mins from Green Park Underground Station</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Direct General Inquiry Form -->
+                <div class="lg:col-span-7 glass-panel rounded-3xl p-8 sm:p-10 space-y-6">
+                    <h3 class="text-2xl font-bold font-cinzel text-white">General Enquiries & Press</h3>
+                    <p class="text-xs text-silver-400">Have a non-booking question or press collaboration? Message our studio concierge below.</p>
+
+                    <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" required placeholder="Your Name" class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white">
+                            <input type="email" required placeholder="Your Email" class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white">
+                        </div>
+                        <input type="text" placeholder="Subject" class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white">
+                        <textarea rows="5" required placeholder="Write your inquiry..." class="w-full bg-obsidian-950 border border-white/20 rounded-xl p-3 text-sm text-white focus:outline-none focus:border-white"></textarea>
+                        
+                        <button type="submit" class="w-full py-4 rounded-xl bg-white text-black hover:bg-silver-300 font-bold text-xs uppercase tracking-widest transition-all">
+                            Send Concierge Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-obsidian-950 border-t border-white/10 py-16 text-silver-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-full border border-white flex items-center justify-center bg-obsidian-800">
+                            <span class="font-cinzel text-lg font-bold text-white">A</span>
+                        </div>
+                        <span class="font-cinzel text-lg tracking-widest font-bold text-white">AURA</span>
+                    </div>
+                    <p class="text-silver-500 leading-relaxed">
+                        Bespoke body art atelier in Mayfair, London. Operating by private appointment only.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="space-y-3">
+                    <h4 class="font-cinzel font-bold text-white uppercase tracking-wider text-xs">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-white transition-colors">Studio Experience</a></li>
+                        <li><a href="#artists" class="hover:text-white transition-colors">Resident Artists</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition-colors">Blackwork Gallery</a></li>
+                        <li><a href="#booking" class="hover:text-white transition-colors">Deposit Booking</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="space-y-3">
+                    <h4 class="font-cinzel font-bold text-white uppercase tracking-wider text-xs">Policy & Hygiene</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Deposit Policy (£100)</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Hourly Rate (£200/hr)</a></li>
+                        <li><a href="#aftercare" class="hover:text-white transition-colors">Aftercare Instructions</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">Terms & Disclaimers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="space-y-3">
+                    <h4 class="font-cinzel font-bold text-white uppercase tracking-wider text-xs">Social & Connect</h4>
+                    <div class="flex space-x-4 text-base text-white">
+                        <a href="#" class="hover:text-silver-300 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-silver-300 transition-colors"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#" class="hover:text-silver-300 transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="hover:text-silver-300 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <p class="text-[11px] text-silver-500 mt-2">© 2026 AURA TATTOO STUDIO LONDON LTD. All Rights Reserved.</p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center text-[10px] text-silver-500 uppercase tracking-widest space-y-4 sm:space-y-0">
+                <p>14 Berkeley St, Mayfair, London W1J 8DX</p>
+                <p>Designed for Exclusive Collectors</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL POPUP FOR GALLERY ZOOM -->
+    <div id="image-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full glass-panel rounded-3xl overflow-hidden border border-white/30">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-white hover:text-silver-300 text-2xl z-10 p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="h-96 md:h-[500px]">
+                    <img id="modal-img" src="" alt="Modal View" class="w-full h-full object-cover bw-img">
+                </div>
+                <div class="p-8 flex flex-col justify-center space-y-4">
+                    <span class="text-xs uppercase tracking-widest text-silver-400 font-semibold">Masterpiece Closeup</span>
+                    <h3 id="modal-title" class="text-2xl font-bold font-cinzel text-white"></h3>
+                    <p id="modal-desc" class="text-sm text-silver-400"></p>
+                    <hr class="border-white/10">
+                    <p class="text-xs text-silver-300">
+                        Interested in a similar bespoke design? Reserve a consultation slot with our master artists.
+                    </p>
+                    <a href="#booking" onclick="closeModal()" class="block text-center py-3 rounded-xl bg-white text-black font-bold text-xs uppercase tracking-wider hover:bg-silver-300 transition-all">
+                        Book Similar Session
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Global State variables
+        let currentCurrency = 'USD';
+        const exchangeRateGBP = 0.78; // $1 USD = £0.78 GBP
+        const baseHourlyRateUSD = 200;
+        const baseDepositUSD = 100;
+
+        let selectedPlacement = 'Arm / Forearm';
+        let selectedArtist = 'Viktor Vance';
+        let selectedHours = 3;
+
+        // Currency Toggle Function
+        function setCurrency(currency) {
+            currentCurrency = currency;
+            const usdBtn = document.getElementById('currency-usd');
+            const gbpBtn = document.getElementById('currency-gbp');
+
+            if (currency === 'USD') {
+                usdBtn.className = 'px-3 py-1 rounded-full bg-white text-black transition-all';
+                gbpBtn.className = 'px-3 py-1 rounded-full text-silver-400 hover:text-white transition-all';
+            } else {
+                gbpBtn.className = 'px-3 py-1 rounded-full bg-white text-black transition-all';
+                usdBtn.className = 'px-3 py-1 rounded-full text-silver-400 hover:text-white transition-all';
+            }
+
+            updateDisplays();
+            updateBookingEstimate();
+        }
+
+        // Update Text Elements Across Site
+        function updateDisplays() {
+            const rateStr = currentCurrency === 'USD' ? '$200 / hr' : '£156 / hr';
+            const depStr = currentCurrency === 'USD' ? '$100' : '£78';
+
+            document.getElementById('rate-display').innerText = rateStr;
+            document.getElementById('deposit-display').innerText = depStr;
+
+            const rateElems = document.querySelectorAll('.price-rate');
+            rateElems.forEach(el => el.innerText = currentCurrency === 'USD' ? '$200 per hour' : '£156 per hour');
+
+            const depElems = document.querySelectorAll('.price-deposit');
+            depElems.forEach(el => el.innerText = currentCurrency === 'USD' ? '$100.00' : '£78.00');
+        }
+
+        // Selection Handlers for Booking Engine
+        function selectPlacement(name, defaultHours, btnElement) {
+            selectedPlacement = name;
+            selectedHours = defaultHours;
+            document.getElementById('hours-slider').value = defaultHours;
+            
+            const buttons = document.querySelectorAll('.placement-btn');
+            buttons.forEach(b => {
+                b.classList.remove('active-option', 'border-white', 'bg-obsidian-800');
+                b.classList.add('border-white/10', 'bg-obsidian-900');
+            });
+            btnElement.classList.remove('border-white/10', 'bg-obsidian-900');
+            btnElement.classList.add('active-option', 'border-white', 'bg-obsidian-800');
+
+            updateBookingEstimate();
+        }
+
+        function selectArtist(artistName, style, btnElement) {
+            selectedArtist = artistName;
+            
+            if(btnElement) {
+                const buttons = document.querySelectorAll('.artist-btn');
+                buttons.forEach(b => {
+                    b.classList.remove('active-option', 'border-white', 'bg-obsidian-800');
+                    b.classList.add('border-white/10', 'bg-obsidian-900');
+                });
+                btnElement.classList.remove('border-white/10', 'bg-obsidian-900');
+                btnElement.classList.add('active-option', 'border-white', 'bg-obsidian-800');
+            } else {
+                const artistBtns = document.querySelectorAll('.artist-btn');
+                artistBtns.forEach(b => {
+                    if(b.innerText.includes(artistName)) {
+                        b.click();
+                    }
+                });
+            }
+
+            updateBookingEstimate();
+        }
+
+        // Recalculate Booking Costs
+        function updateBookingEstimate() {
+            selectedHours = parseInt(document.getElementById('hours-slider').value);
+            document.getElementById('hours-display').innerText = `${selectedHours} ${selectedHours === 1 ? 'Hour' : 'Hours'}`;
+
+            const totalUSD = selectedHours * baseHourlyRateUSD;
+            const remainingUSD = totalUSD - baseDepositUSD;
+
+            const symbol = currentCurrency === 'USD' ? '$' : '£';
+            const multiplier = currentCurrency === 'USD' ? 1 : exchangeRateGBP;
+
+            const hourlyRateFormatted = `${symbol}${Math.round(baseHourlyRateUSD * multiplier)} / hr`;
+            const totalFormatted = `${symbol}${Math.round(totalUSD * multiplier)}.00`;
+            const depositFormatted = `${symbol}${Math.round(baseDepositUSD * multiplier)}.00`;
+            const remainingFormatted = `${symbol}${Math.round(remainingUSD * multiplier)}.00`;
+
+            document.getElementById('summary-placement').innerText = selectedPlacement;
+            document.getElementById('summary-artist').innerText = selectedArtist;
+            document.getElementById('summary-hours').innerText = `${selectedHours} Hours`;
+            document.getElementById('summary-rate').innerText = hourlyRateFormatted;
+            document.getElementById('summary-total').innerText = totalFormatted;
+            document.getElementById('summary-deposit').innerText = depositFormatted;
+            document.getElementById('summary-remaining').innerText = remainingFormatted;
+        }
+
+        // Gallery Filter Handler
+        function filterGallery(category, btnElem) {
+            const items = document.querySelectorAll('.gallery-item');
+            const filterBtns = document.querySelectorAll('#gallery-filters .filter-btn');
+
+            filterBtns.forEach(b => {
+                b.className = 'filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider bg-obsidian-800 text-silver-300 hover:text-white border border-white/20';
+            });
+            btnElem.className = 'filter-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider bg-white text-black font-bold';
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Viewer
+        function openModal(imgUrl, title, desc) {
+            document.getElementById('modal-img').src = imgUrl;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('image-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('image-modal').classList.add('hidden');
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Booking Submission with Telegram Alert & Direct WhatsApp Negotiation
+        async function processBookingSubmission() {
+            const name = document.getElementById('client-name').value;
+            const email = document.getElementById('client-email').value;
+
+            if (!name || !email) {
+                alert('Please enter your full name and email address to proceed with booking reservation.');
+                return;
+            }
+
+            // 1. Telegram Bot Credentials (Replace with your BotFather token and chat ID)
+            const botToken = "9125135224:AAFFjkTbwg0CEy6-TWjw-dUqniaID2wAjGw"; 
+            const chatId = "8965398913";     
+
+            const telegramMessage = `🚨 *NEW AURA TATTOO INQUIRY* 🚨\n\n` +
+                `👤 *Client Name:* ${name}\n` +
+                `📧 *Email:* ${email}\n` +
+                `🎨 *Artist:* ${selectedArtist}\n` +
+                `📍 *Placement:* ${selectedPlacement}\n` +
+                `⏱️ *Session Hours:* ${selectedHours} Hours\n\n` +
+                `💬 *Status:* Redirected to WhatsApp for direct price negotiation.`;
+
+            // Send notification silently to Telegram in background
+            try {
+                await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: telegramMessage,
+                        parse_mode: "Markdown"
+                    })
+                });
+            } catch (error) {
+                console.error("Telegram alert failed:", error);
+            }
+
+            // 2. Redirect straight to WhatsApp for direct price negotiation
+            const studioWhatsApp = "254748618304"; // Replace with your studio WhatsApp phone number (no + sign)
+            const waText = encodeURIComponent(
+                `Hello Aura Tattoo Atelier! ✒️\n\nMy name is ${name}. I just submitted a booking inquiry on your website for a ${selectedHours}-hour session with ${selectedArtist} (${selectedPlacement}).\n\nI'd like to discuss the design and negotiate pricing directly!`
+            );
+
+            alert(`Thank you, ${name}! Your request has been logged. Opening WhatsApp to discuss details and negotiate pricing directly...`);
+            window.location.href = `https://wa.me/${studioWhatsApp}?text=${waText}`;
+        }
+
+        // Contact Form Mock
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            alert('Your message has been received by our Mayfair studio concierge. We will respond within 24 hours.');
+            e.target.reset();
+        }
+
+        // Mobile Menu Drawer
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Initial setup on window load
+        window.onload = function() {
+            updateBookingEstimate();
+        };
+    </script>
+
+<!-- Draggable Glowing WhatsApp Button -->
+<div id="whatsapp-fab" class="fixed bottom-6 left-6 z-50 cursor-grab active:cursor-grabbing touch-none select-none">
+    <a id="whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" 
+       class="relative flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl transition-transform duration-300 hover:scale-105 active:scale-95 group"
+       title="Chat with Aura Tattoo Atelier on WhatsApp">
+        <!-- Subtle Glow Effect -->
+        <span class="absolute inset-0 rounded-full bg-[#25D366] opacity-40 blur-md group-hover:opacity-60 transition-opacity animate-pulse"></span>
+        
+        <!-- WhatsApp Icon -->
+        <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 24 24">
+            <path d="M12.031 0C5.396 0 .02 5.376.02 12.012c0 2.12.553 4.19 1.606 6.012L0 24l6.168-1.618a11.96 11.96 0 005.863 1.523h.005c6.635 0 12.01-5.376 12.01-12.013C24.046 5.376 18.666 0 12.031 0zm5.892 16.942c-.247.697-1.432 1.328-1.97 1.4-.495.066-1.144.118-3.376-.8-2.853-1.174-4.69-4.083-4.832-4.275-.142-.192-1.155-1.54-1.155-2.937 0-1.397.728-2.083.987-2.366.259-.283.565-.353.753-.353.189 0 .377.001.542.009.176.008.412-.067.644.49.247.594.847 2.069.921 2.22.075.151.124.33.024.528-.1.198-.151.32-.301.49-.151.171-.318.382-.455.514-.15.143-.306.299-.132.598.174.299.774 1.276 1.662 2.067 1.141 1.018 2.103 1.332 2.402 1.481.299.149.474.125.65-.077.176-.201.753-.876.953-1.176.2-.3.401-.25.676-.149.275.101 1.742.822 2.043.972.301.15.501.224.576.35.075.127.075.736-.172 1.433z"/>
+        </svg>
+    </a>
+</div>
+
+<script>
+    (function () {
+        // --- 1. CONFIGURATION ---
+        // Replace with your studio's WhatsApp phone number in international format without '+' or spaces (e.g., 447123456789 for UK)
+        const phoneNumber = "254"; 
+        
+        // Custom pre-filled client message
+        const customMessage = encodeURIComponent(
+            "Hello Aura Tattoo Atelier! ✒️\n\nI would like to inquire about booking a bespoke session at your Mayfair studio. Could you please assist me with consultation availability and deposit details?"
+        );
+
+        const fabLink = document.getElementById("whatsapp-link");
+        fabLink.href = `https://wa.me/${phoneNumber}?text=${customMessage}`;
+
+        // --- 2. DRAGGABLE LOGIC ---
+        const fab = document.getElementById("whatsapp-fab");
+        let isDragging = false;
+        let hasDragged = false;
+        let startX, startY, initialLeft, initialTop;
+
+        function startDrag(e) {
+            isDragging = true;
+            hasDragged = false;
+            
+            const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+
+            startX = clientX;
+            startY = clientY;
+            
+            const rect = fab.getBoundingClientRect();
+            initialLeft = rect.left;
+            initialTop = rect.top;
+
+            // Remove bottom/right pinning once dragged
+            fab.style.bottom = 'auto';
+            fab.style.right = 'auto';
+            fab.style.left = `${initialLeft}px`;
+            fab.style.top = `${initialTop}px`;
+        }
+
+        function doDrag(e) {
+            if (!isDragging) return;
+            
+            const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+            const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+
+            const deltaX = clientX - startX;
+            const deltaY = clientY - startY;
+
+            if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) {
+                hasDragged = true;
+            }
+
+            let newLeft = initialLeft + deltaX;
+            let newTop = initialTop + deltaY;
+
+            // Constrain inside viewport
+            const maxLeft = window.innerWidth - fab.offsetWidth - 10;
+            const maxTop = window.innerHeight - fab.offsetHeight - 10;
+
+            newLeft = Math.max(10, Math.min(newLeft, maxLeft));
+            newTop = Math.max(10, Math.min(newTop, maxTop));
+
+            fab.style.left = `${newLeft}px`;
+            fab.style.top = `${newTop}px`;
+        }
+
+        function stopDrag(e) {
+            if (!isDragging) return;
+            isDragging = false;
+        }
+
+        // Prevent opening link if user was dragging
+        fabLink.addEventListener("click", function (e) {
+            if (hasDragged) {
+                e.preventDefault();
+                hasDragged = false;
+            }
+        });
+
+        // Mouse Events
+        fab.addEventListener("mousedown", startDrag);
+        window.addEventListener("mousemove", doDrag);
+        window.addEventListener("mouseup", stopDrag);
+
+        // Touch Events (Mobile)
+        fab.addEventListener("touchstart", startDrag, { passive: true });
+        window.addEventListener("touchmove", doDrag, { passive: true });
+        window.addEventListener("touchend", stopDrag);
+    })();
+</script>
+    
+</body
+</html>
